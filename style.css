@@ -1,0 +1,345 @@
+*{  
+    box-sizing  : border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(45deg,#0a0a0a,#3a4452);
+    background-attachment: fixed;
+}
+h1{
+    text-align: left;
+    align-self: self-start;
+    color: white;
+    font-size: 4rem;
+    text-transform: capitalize;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left:38vw;
+    text-shadow: 20px 20px 10px black;
+}
+/* horizantal lines */
+.horizantal{
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 99;
+    display: none;
+}
+
+#dag1{
+    transform: translateY(-10rem);
+}
+
+#dag3{
+    transform: translateY(10rem);
+}
+
+.cut-horizantal{
+    width: 32rem;
+    border: 0.4rem solid white ;
+    border-radius: 1rem;
+    transform: translateX(2rem);
+    z-index: 99;
+}
+
+.cap-horizantal{
+    width: 4rem;
+    height: 4rem;
+    color: transparent;
+    border-right: 0.6rem solid white;
+    border-bottom: 0.6rem solid white;
+    transform:rotate(-45deg);
+    border-radius: 0.5rem;
+}
+.horizantal.winnerO .cut-horizantal ,.horizantal.winnerO .cap-horizantal{
+    box-shadow: 0 0 15px 5px rgba(30, 144, 255, 0.8), 
+    0 0 30px 10px rgba(30, 144, 255, 0.6),
+    0 0 50px 15px rgba(30, 144, 255, 0.4),
+    0 0 70px 20px rgba(30, 144, 255, 0.3),
+    inset 0 0 15px 5px rgba(30, 144, 255, 0.8), 
+    inset 0 0 30px 10px rgba(30, 144, 255, 0.6),
+    inset 0 0 50px 15px rgba(30, 144, 255, 0.4),
+    inset 0 0 70px 20px rgba(30, 144, 255, 0.3);
+}
+.horizantal.winnerX .cut-horizantal ,.horizantal.winnerX .cap-horizantal{
+    box-shadow: 0 0 15px 5px rgba(220, 20, 60, 0.8), 
+    0 0 30px 10px rgba(220, 20, 60, 0.6), 
+    0 0 50px 15px rgba(220, 20, 60, 0.4), 
+    0 0 70px 20px rgba(220, 20, 60, 0.3),
+    inset 0 0 15px 5px rgba(220, 20, 60, 0.8), 
+    inset 0 0 30px 10px rgba(220, 20, 60, 0.6), 
+    inset 0 0 50px 15px rgba(220, 20, 60, 0.4), 
+    inset 0 0 70px 20px rgba(220, 20, 60, 0.3);;
+}
+/* vertical line */
+.vertical{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 99;
+    display: none;
+}
+
+#dag_1{
+    transform: translateX(-10rem);
+}
+
+#dag_3{
+    transform: translateX(10rem);
+}
+
+.cut-vertical{
+    height: 32rem;
+    border: 0.4rem solid white ;
+    border-radius: 1rem;
+    transform: translateY(2rem);
+    z-index: 99;
+}
+
+.cap-vertical{
+    width: 4rem;
+    height: 4rem;
+    color: transparent;
+    border-right: 0.6rem solid white;
+    border-bottom: 0.6rem solid white;
+    transform:rotate(45deg);
+    border-radius: 0.5rem;
+}
+.vertical.winnerO .cut-vertical ,.vertical.winnerO .cap-vertical{
+    box-shadow: 0 0 15px 5px rgba(30, 144, 255, 0.8), 
+    0 0 30px 10px rgba(30, 144, 255, 0.6),
+    0 0 50px 15px rgba(30, 144, 255, 0.4),
+    0 0 70px 20px rgba(30, 144, 255, 0.3),
+    inset 0 0 15px 5px rgba(30, 144, 255, 0.8), 
+    inset 0 0 30px 10px rgba(30, 144, 255, 0.6),
+    inset 0 0 50px 15px rgba(30, 144, 255, 0.4),
+    inset 0 0 70px 20px rgba(30, 144, 255, 0.3);
+}
+.vertical.winnerX .cut-vertical ,.vertical.winnerX .cap-vertical{
+    box-shadow: 0 0 15px 5px rgba(220, 20, 60, 0.8), 
+    0 0 30px 10px rgba(220, 20, 60, 0.6), 
+    0 0 50px 15px rgba(220, 20, 60, 0.4), 
+    0 0 70px 20px rgba(220, 20, 60, 0.3),
+    inset 0 0 15px 5px rgba(220, 20, 60, 0.8), 
+    inset 0 0 30px 10px rgba(220, 20, 60, 0.6), 
+    inset 0 0 50px 15px rgba(220, 20, 60, 0.4), 
+    inset 0 0 70px 20px rgba(220, 20, 60, 0.3);;
+}
+/* diagonal line */
+.diagonal{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 99;
+    display: none;
+}
+
+#left-right{
+    transform: rotate(45deg);
+}
+
+#right-left{
+    transform: rotate(-45deg);
+}
+
+.cut-diagonal{
+    height:43rem;
+    border: 0.4rem solid white;
+    border-radius: 1rem;
+    z-index: 99;
+}
+
+.cap-diagonal{
+    width: 4rem;
+    height: 4rem;
+    color: transparent;
+    border-right: 0.6rem solid white;
+    border-bottom: 0.6rem solid white;
+    transform:rotate(45deg) translate(-1.5rem,-1.5rem);
+    border-radius: 0.5rem;
+}
+.diagonal.winnerO .cut-diagonal ,.diagonal.winnerO .cap-diagonal{
+    box-shadow: 0 0 15px 5px rgba(30, 144, 255, 0.8), 
+    0 0 30px 10px rgba(30, 144, 255, 0.6),
+    0 0 50px 15px rgba(30, 144, 255, 0.4),
+    0 0 70px 20px rgba(30, 144, 255, 0.3),
+    inset 0 0 15px 5px rgba(30, 144, 255, 0.8), 
+    inset 0 0 30px 10px rgba(30, 144, 255, 0.6),
+    inset 0 0 50px 15px rgba(30, 144, 255, 0.4),
+    inset 0 0 70px 20px rgba(30, 144, 255, 0.3);
+}
+.diagonal.winnerX .cut-diagonal ,.diagonal.winnerX .cap-diagonal{
+    box-shadow: 0 0 15px 5px rgba(220, 20, 60, 0.8), 
+    0 0 30px 10px rgba(220, 20, 60, 0.6), 
+    0 0 50px 15px rgba(220, 20, 60, 0.4), 
+    0 0 70px 20px rgba(220, 20, 60, 0.3),
+    inset 0 0 15px 5px rgba(220, 20, 60, 0.8), 
+    inset 0 0 30px 10px rgba(220, 20, 60, 0.6), 
+    inset 0 0 50px 15px rgba(220, 20, 60, 0.4), 
+    inset 0 0 70px 20px rgba(220, 20, 60, 0.3);
+}
+/* tie  */
+.tie{
+    width: 40rem;
+    height: 35rem;
+    background:rgba(255, 255, 255, 0.115); 
+    backdrop-filter: blur(0.3rem);
+    border-radius: 2rem;
+    box-shadow: 0px 0px 20px black;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4.5rem;
+    text-transform: capitalize;
+    font-weight: 900;
+    color: black;
+    text-shadow: 15px 15px 10px black;
+    padding: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    display: none;
+    z-index: 100;
+}
+/* setup */
+.container{
+    width: 30rem;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.box{
+    border:5px solid white;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container > :nth-child(1){
+    border-top:none;
+    border-left: none;
+}
+
+.container > :nth-child(2){
+    border-top: none;
+}
+
+.container > :nth-child(3){
+    border-top: none;
+    border-right: none;
+}
+
+.container > :nth-child(4){
+    border-left: none;
+}
+
+.container > :nth-last-child(1){
+    border-bottom: none;
+    border-right: none;
+}
+
+.container > :nth-last-child(2){
+    border-bottom: none;
+}
+
+.container > :nth-last-child(3){
+    border-bottom: none;
+    border-left: none;
+}
+
+.container > :nth-last-child(4){
+    border-right: none;
+    box-shadow: none;
+}
+
+.circle{
+    width: 7rem;
+    height: 7rem;
+    border:0.8rem solid white ;
+    box-shadow:0 0 7px 2px rgba(30, 144, 255, 0.8), 
+    0 0 15px 5px rgba(30, 144, 255, 0.6),
+    0 0 25px 7px rgba(30, 144, 255, 0.4),
+    0 0 35px 10px rgba(30, 144, 255, 0.3),
+    inset 0 0 7px 2px rgba(30, 144, 255, 0.8), 
+    inset 0 0 15px 5px rgba(30, 144, 255, 0.6),
+    inset 0 0 25px 7px rgba(30, 144, 255, 0.4),
+    inset 0 0 35px 10px rgba(30, 144, 255, 0.3);
+    border-radius: 50%;
+    display: none;
+}
+.cross{
+    width: 8rem;
+    height: 8rem;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.left{
+    width:0.8rem;
+    height: 8rem;
+    background-color: white;
+    border-radius: 1rem;
+    position: absolute;
+    transform: rotate(45deg);
+    box-shadow: 0 0 15px 5px rgba(220, 20, 60, 0.8), 
+    0 0 30px 10px rgba(220, 20, 60, 0.6), 
+    0 0 50px 15px rgba(220, 20, 60, 0.4), 
+    0 0 70px 20px rgba(220, 20, 60, 0.3);
+}
+
+.right{
+    width:0.8rem;
+    height: 8rem;
+    background-color: white;
+    border-radius: 1rem;
+    position: absolute;
+    transform: rotate(-45deg);
+    box-shadow: 0 0 15px 5px rgba(220, 20, 60, 0.8), 
+    0 0 30px 10px rgba(220, 20, 60, 0.6), 
+    0 0 50px 15px rgba(220, 20, 60, 0.4), 
+    0 0 70px 20px rgba(220, 20, 60, 0.3);
+}
+.btns{
+    margin-top: 5rem;
+    margin-bottom: -8rem;
+}
+button{
+    padding:1rem 2rem;
+    background:crimson;
+    border:none;
+    color:white;
+    text-transform: capitalize;
+    font-weight: 900;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    transition: color 0.5s ease,background 0.5s ease,transform 0.5s ease;
+    z-index: 111;
+    box-shadow: 20px 30px 50px  black;
+}
+button:hover{
+    background:greenyellow;
+    color: black;
+    transform: scale(1.3);
+    box-shadow: 30px 60px 70px  black;
+}
+#new{
+    display: none;
+}
