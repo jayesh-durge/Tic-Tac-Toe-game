@@ -12,19 +12,21 @@ body{
     align-items: center;
     justify-content: center;
     background:linear-gradient(45deg,#0a0a0a,#3a4452);
-    background-attachment: fixed;
+    background-attachment:;
+    overflow: hidden;
 }
 h1{
-    text-align: left;
     align-self: self-start;
     color: white;
     font-size: 4rem;
     text-transform: capitalize;
-    padding: 1rem;
+    padding: 1rem 0;
     position: fixed;
-    top: 0;
-    left:38vw;
+    top:5%;
+    transform: translate(0 ,-50%);
     text-shadow: 20px 20px 10px black;
+    width: 100vw;
+    text-align: center;
 }
 /* horizantal lines */
 .horizantal{
@@ -193,8 +195,8 @@ h1{
 .tie{
     width: 40rem;
     height: 35rem;
-    background:rgba(255, 255, 255, 0.115); 
-    backdrop-filter: blur(0.3rem);
+    background:rgba(255, 255, 255, 0.115),linear-gradient(to right ,black,black); 
+    backdrop-filter: blur(0.5rem);
     border-radius: 2rem;
     box-shadow: 0px 0px 20px black;
     position: absolute;
@@ -205,8 +207,8 @@ h1{
     font-size: 4.5rem;
     text-transform: capitalize;
     font-weight: 900;
-    color: black;
-    text-shadow: 15px 15px 10px black;
+    color: white;
+    text-shadow: 5px 5px 5px black;
     padding: 1rem;
     font-family: 'Times New Roman', Times, serif;
     display: none;
@@ -342,4 +344,13 @@ button:hover{
 }
 #new{
     display: none;
+}
+
+@media (max-width:360px) {
+    body{
+        transform: scale(0.6);
+    }
+    h1{
+        top:-60px;
+    }
 }
